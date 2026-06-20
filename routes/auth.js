@@ -32,6 +32,7 @@ router.post("/register", asyncHandler(async (req, res) => {
 );
 
 router.get("/login", (req, res) => {
+  
   const locals = {
     title: "로그인",
   };
