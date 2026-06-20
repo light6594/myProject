@@ -1,0 +1,29 @@
+<main class="container">
+  <div class="page-title">
+    <h1>내 선수 목록</h1>
+    <a href="/add" class="button">선수 추가</a>
+  </div>
+
+  <% if (data.length === 0) { %>
+    <p class="empty">등록된 선수가 없습니다.</p>
+  <% } else { %>
+    <div class="card-list">
+      <% data.forEach((player) => { %>
+        <article class="player-card">
+          <div>
+            <span class="number">No. <%= player.number %></span>
+            <h2><%= player.name %></h2>
+            <p><%= player.position %> / <%= player.team %></p>
+            <p class="memo"><%= player.memo || "메모 없음" %></p>
+          </div>
+          <div class="card-actions">
+            <a href="/edit/<%= player._id %>" class="small-button">수정</a>
+            <form action="/delete/<%= player._id %>?_method=DELETE" method="post">
+              <button type="submit" class="small-button danger">삭제</button>
+            </form>
+          </div>
+        </article>
+      <% }) %>
+    </div>
+  <% } %>
+</main>

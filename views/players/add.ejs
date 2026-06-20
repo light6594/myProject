@@ -1,0 +1,31 @@
+<main class="form-page">
+  <form action="/add" method="post" class="form-box wide">
+    <h1>선수 추가</h1>
+    <label>
+      선수 이름
+      <input type="text" name="name" required>
+    </label>
+    <label>
+      포지션
+      <select name="position" required>
+        <option value="GK">GK</option>
+        <option value="DF">DF</option>
+        <option value="MF">MF</option>
+        <option value="FW">FW</option>
+      </select>
+    </label>
+    <label>
+      등번호
+      <input type="number" name="number" min="1" max="99" required>
+    </label>
+    <label>
+      소속팀
+      <input type="text" name="team" required>
+    </label>
+    <label>
+      메모
+      <textarea name="memo" rows="5"></textarea>
+    </label>
+    <button type="submit">추가하기</button>
+  </form>
+</main>

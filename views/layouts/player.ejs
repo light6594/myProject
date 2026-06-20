@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title><%= locals.title %></title>
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body>
+    <header class="header">
+      <a href="/players" class="logo">Football Squad</a>
+      <nav>
+        <a href="/players">선수 목록</a>
+        <a href="/add">선수 추가</a>
+        <a href="/logout">로그아웃</a>
+      </nav>
+    </header>
+
+    <%- body %>
+  </body>
+</html>
