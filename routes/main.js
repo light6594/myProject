@@ -5,7 +5,7 @@ const mainLayout = "../views/layouts/main.ejs";
 router.get(["/", "/home"], (req, res) => {
   
   const locals = {
-    title: "축구 선수단 관리",
+    title: "축구 선수단 구성 및 관리",
   };
 
   res.render("index", { locals, layout: mainLayout });
